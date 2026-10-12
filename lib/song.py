@@ -1,19 +1,15 @@
-
 class Song:
-    # Class attributes
     count = 0
     genres = []
     artists = []
     genre_count = {}
     artist_count = {}
 
-    # Initialize each song
     def __init__(self, name, artist, genre):
         self.name = name
         self.artist = artist
         self.genre = genre
 
-        # Update library information
         Song.add_song_to_count()
         Song.add_to_genres(genre)
         Song.add_to_artists(artist)
@@ -47,3 +43,5 @@ class Song:
             cls.artist_count[artist] += 1
         else:
             cls.artist_count[artist] = 1
+
+
